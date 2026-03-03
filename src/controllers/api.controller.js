@@ -1,11 +1,14 @@
 const path = require("path");
 const fs = require("fs");
 
-function readJson(relPath) {
+function readJson(relPath, fallback) {
   const filePath = path.join(__dirname, "..", "data", relPath);
-  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  const raw = fs.readFileSync(filePath, "utf-8").trim();
+  if (!raw) return fallback;      // file rỗng => trả default
+  return JSON.parse(raw);
 }
 
-exports.getVillages = (req, res) => res.json(readJson("villages.json"));
-exports.getTeaTypes = (req, res) => res.json(readJson("teaTypes.json"));
-exports.getActivities = (req, res) => res.json(readJson("activities.json"));
+exports.getVillages = (req, res) => res.json(readJson("villages.json", []));
+exports.getTeaTypes = (req, res) => res.json(readJson("teaTypes.json", []));
+exports.getActivities = (req, res) =>
+  res.json(readJson("activities.json", { photo: [], culture: [], relax: [], experience: [] }));

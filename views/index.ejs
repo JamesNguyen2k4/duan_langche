@@ -2,27 +2,383 @@
 <html lang="vi" class="h-full">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title><%= siteTitle %> - Du Lịch Trà</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= siteTitle || "Làng Chè Việt Nam - Du Lịch Trà" %></title>
+  <!-- Tailwind (giữ nguyên như bản gốc) -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-
-  <!-- Leaflet -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+  <!-- CSS tách riêng từ file gốc -->
   <link rel="stylesheet" href="/css/style.css" />
+  
 </head>
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="/js/main.js"></script>
 <body class="h-full">
-  <!-- (GIỮ TOÀN BỘ HTML BODY như file bạn, chỉ thay text động) -->
-  <h1 id="site-title"><%= siteTitle %></h1>
-  <p id="hero-subtitle"><%= heroSubtitle %></p>
+  <!-- Header -->
+  <header class="header">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-3 cursor-pointer" onclick="showSection('home')">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+            <span class="text-2xl">🍵</span>
+          </div>
+          <div>
+            <h1 id="site-title" class="font-display text-xl font-bold text-white">
+              <%= siteTitle || "Làng Chè Việt Nam" %>
+            </h1>
+            <p id="hero-subtitle" class="text-green-200 text-sm">
+              <%= heroSubtitle || "Khám phá văn hóa trà Việt" %>
+            </p>
+          </div>
+        </div>
 
-  <!-- ... -->
-  <div id="map" class="map-container mb-8" style="height:500px;"></div>
-  <!-- ... -->
+        <!-- Navigation -->
+        <nav class="flex items-center gap-6">
+          <a href="#" class="nav-link text-white font-semibold" onclick="showSection('home'); return false;">Trang chủ</a>
+          <a href="#" class="nav-link text-white font-semibold" onclick="showSection('about'); return false;">Giới thiệu</a>
+          <button class="btn-secondary text-sm py-2 px-4" onclick="openQRModal()">
+            📱 Quét QR
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-  <script src="/js/main.js" type="module"></script>
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <!-- HOME SECTION -->
+    <section id="section-home" class="section active">
+      <!-- Hero -->
+      <div class="text-center mb-10">
+        <h2 class="font-display text-4xl font-bold text-green-800 mb-4">Bản Đồ Làng Chè 🌿</h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          Khám phá những vùng trà nổi tiếng Việt Nam. Click vào các điểm đánh dấu để xem thông tin chi tiết về từng làng chè.
+        </p>
+      </div>
+
+      <!-- Map Container -->
+      <div class="map-container h-96 md:h-[500px] relative mb-8" id="map">
+        <!-- Markers will be rendered here by JS -->
+
+        <!-- Map Legend -->
+        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+          <h4 class="font-bold text-green-800 mb-2 text-sm">Chú thích</h4>
+          <div class="flex items-center gap-2 text-sm text-gray-600">
+            <div class="w-4 h-4 bg-red-500 rounded-full"></div><span>Làng chè</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-600 mt-1">
+            <div class="w-4 h-4 bg-green-500 rounded-full"></div><span>Đang xem</span>
+          </div>
+        </div>
+
+        <!-- Map Title -->
+        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-2 shadow-lg">
+          <span class="text-green-800 font-semibold">🗺️ Vùng trà Việt Nam</span>
+        </div>
+      </div>
+
+      <!-- Quick Info Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="card p-6 text-center">
+          <div class="text-4xl mb-3">🏔️</div>
+          <h3 class="font-display text-xl font-bold text-green-800 mb-2">6 Làng Chè</h3>
+          <p class="text-gray-600 text-sm">Các vùng trà nổi tiếng từ Bắc vào Nam</p>
+        </div>
+
+        <div class="card p-6 text-center">
+          <div class="text-4xl mb-3">📖</div>
+          <h3 class="font-display text-xl font-bold text-green-800 mb-2">Góc Trà Kể Chuyện</h3>
+          <p class="text-gray-600 text-sm">Khám phá câu chuyện văn hóa độc đáo</p>
+        </div>
+
+        <div class="card p-6 text-center">
+          <div class="text-4xl mb-3">🎯</div>
+          <h3 class="font-display text-xl font-bold text-green-800 mb-2">Gợi Ý Thông Minh</h3>
+          <p class="text-gray-600 text-sm">Tuyến trải nghiệm phù hợp với bạn</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="section-about" class="section">
+      <div class="card p-8 md:p-12">
+        <h2 class="font-display text-3xl font-bold text-green-800 mb-6 text-center">Giới Thiệu Dự Án 🌱</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <div class="w-full h-64 bg-gradient-to-br from-green-200 to-green-300 rounded-xl flex items-center justify-center mb-4">
+              <div class="text-center">
+                <span class="text-6xl block mb-2">🍃</span>
+                <span class="text-green-700 font-semibold">Văn hóa trà Việt</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-display text-xl font-bold text-green-700 mb-4">Về "Làng Chè"</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Dự án <strong>"Làng Chè"</strong> là sản phẩm nghiên cứu khoa học kỹ thuật nhằm số hóa và quảng bá du lịch văn hóa trà Việt Nam.
+              Chúng tôi kết hợp công nghệ hiện đại với di sản văn hóa truyền thống.
+            </p>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Thông qua <strong>bản đồ tương tác</strong>, <strong>hệ thống quét QR</strong> và <strong>công cụ gợi ý thông minh</strong>,
+              du khách có thể dễ dàng khám phá các làng chè nổi tiếng và nhận được trải nghiệm cá nhân hóa.
+            </p>
+
+            <div class="bg-green-50 rounded-xl p-4 mt-4">
+              <h4 class="font-bold text-green-800 mb-2">🎯 Mục tiêu dự án:</h4>
+              <ul class="text-gray-600 space-y-2 text-sm">
+                <li>✅ Bảo tồn và phát huy văn hóa trà Việt</li>
+                <li>✅ Ứng dụng công nghệ trong du lịch</li>
+                <li>✅ Tạo trải nghiệm cá nhân hóa cho du khách</li>
+                <li>✅ Kết nối cộng đồng làm trà với du khách</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <button class="btn-primary" onclick="showSection('home')">🗺️ Xem Bản Đồ Làng Chè</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VILLAGE DETAIL SECTION -->
+    <section id="section-detail" class="section">
+      <div class="mb-6">
+        <button class="text-green-600 font-semibold hover:text-green-800 transition flex items-center gap-2"
+          onclick="showSection('home')">
+          ← Quay lại bản đồ
+        </button>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="md:col-span-2">
+          <div class="card overflow-hidden">
+            <!-- Image Placeholder -->
+            <div id="detail-image" class="h-64 bg-gradient-to-br from-green-300 to-green-400 flex items-center justify-center">
+              <div class="text-center text-white">
+                <span class="text-6xl block mb-2">🏞️</span>
+                <span class="font-semibold">Hình ảnh làng chè</span>
+              </div>
+            </div>
+
+            <div class="p-6 md:p-8">
+              <h2 id="detail-name" class="font-display text-3xl font-bold text-green-800 mb-4">Tên Làng Chè</h2>
+              <div id="detail-story" class="prose text-gray-600 space-y-4">
+                <!-- Story paragraphs will be inserted here -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-6">
+          <!-- Info Card -->
+          <div class="card p-6">
+            <h3 class="font-display text-xl font-bold text-green-800 mb-4">📍 Thông tin</h3>
+
+            <div class="space-y-4">
+              <div>
+                <div class="text-sm text-gray-500 mb-1">Địa chỉ</div>
+                <div id="detail-address" class="text-gray-700 font-medium">-</div>
+              </div>
+
+              <div>
+                <div class="text-sm text-gray-500 mb-1">Giờ mở cửa</div>
+                <div id="detail-hours" class="text-gray-700 font-medium">-</div>
+              </div>
+
+              <div>
+                <div class="text-sm text-gray-500 mb-1">Mã QR</div>
+                <div id="detail-code" class="text-green-600 font-bold text-lg">-</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Card -->
+          <div class="card p-6 bg-gradient-to-br from-amber-50 to-orange-50">
+            <h3 class="font-display text-xl font-bold text-amber-800 mb-4">🍵 Trải nghiệm</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Nhận gợi ý tuyến tham quan và loại trà phù hợp với sở thích của bạn.
+            </p>
+            <button class="btn-secondary w-full" onclick="showSection('recommend')">
+              Nhận gợi ý tuyến &amp; loại trà
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOMMENDATION SECTION -->
+    <section id="section-recommend" class="section">
+      <div class="mb-6">
+        <button class="text-green-600 font-semibold hover:text-green-800 transition flex items-center gap-2"
+          onclick="goBackFromRecommend()">
+          ← Quay lại
+        </button>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Form -->
+        <div class="card p-6 md:p-8">
+          <h2 class="font-display text-2xl font-bold text-green-800 mb-2">🎯 Gợi Ý Trải Nghiệm</h2>
+          <p class="text-gray-600 mb-6">Cho chúng tôi biết sở thích của bạn để nhận gợi ý phù hợp nhất.</p>
+
+          <form id="recommend-form" class="space-y-5">
+            <!-- Time -->
+            <div>
+              <label class="block text-gray-700 font-semibold mb-2">⏰ Thời gian tham quan</label>
+              <select id="input-time" class="form-select">
+                <option value="30">30 phút</option>
+                <option value="60" selected>1 giờ</option>
+                <option value="120">2 giờ</option>
+                <option value="240">Nửa ngày (4 giờ)</option>
+              </select>
+            </div>
+
+            <!-- Weather -->
+            <div>
+              <label class="block text-gray-700 font-semibold mb-2">🌤️ Thời tiết hiện tại</label>
+              <select id="input-weather" class="form-select">
+                <option value="sunny">Nắng đẹp</option>
+                <option value="rainy">Mưa</option>
+                <option value="cool" selected>Se lạnh</option>
+              </select>
+            </div>
+
+            <!-- Taste -->
+            <div>
+              <label class="block text-gray-700 font-semibold mb-2">☕ Thói quen uống trà</label>
+              <select id="input-taste" class="form-select">
+                <option value="strong">Đậm đà</option>
+                <option value="light">Nhẹ nhàng</option>
+                <option value="fragrant" selected>Thơm hương</option>
+              </select>
+            </div>
+
+            <!-- Purpose -->
+            <div>
+              <label class="block text-gray-700 font-semibold mb-2">🎪 Nhu cầu chính</label>
+              <select id="input-purpose" class="form-select">
+                <option value="photo">Chụp ảnh check-in</option>
+                <option value="culture" selected>Tìm hiểu văn hóa</option>
+                <option value="relax">Thư giãn nghỉ ngơi</option>
+                <option value="experience">Trải nghiệm hái chè</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-primary w-full text-lg py-4">✨ Nhận Gợi Ý</button>
+          </form>
+        </div>
+
+        <!-- Results -->
+        <div id="recommend-results" class="card p-6 md:p-8 bg-gradient-to-br from-green-50 to-emerald-50">
+          <div class="text-center py-12">
+            <div class="text-6xl mb-4 tea-steam">🍵</div>
+            <h3 class="font-display text-xl text-gray-500 mb-2">Kết quả gợi ý</h3>
+            <p class="text-gray-400">Điền thông tin và bấm "Nhận Gợi Ý" để xem kết quả</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer mt-12 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">🍵</span>
+            <span class="font-display text-xl font-bold">Làng Chè</span>
+          </div>
+          <p class="text-green-200 text-sm">
+            Dự án nghiên cứu khoa học kỹ thuật - Số hóa du lịch văn hóa trà Việt Nam.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Liên kết</h4>
+          <ul class="space-y-2 text-green-200 text-sm">
+            <li><a href="#" onclick="showSection('home'); return false;" class="hover:text-white transition">Trang chủ</a></li>
+            <li><a href="#" onclick="showSection('about'); return false;" class="hover:text-white transition">Giới thiệu</a></li>
+            <li><a href="#" onclick="openQRModal(); return false;" class="hover:text-white transition">Quét QR</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Liên hệ</h4>
+          <p class="text-green-200 text-sm">
+            📧 Email: info@langche.vn<br />
+            📞 Hotline: 1900 xxxx xx
+          </p>
+        </div>
+      </div>
+
+      <div class="border-t border-green-600 mt-8 pt-6 text-center text-green-200 text-sm">
+        © 2025 Làng Chè - Dự án KHKT. Tất cả quyền được bảo lưu.
+      </div>
+    </div>
+  </footer>
+
+  <!-- QR Modal -->
+  <div id="qr-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <div class="text-center mb-6">
+        <div class="text-5xl mb-3">📱</div>
+        <h3 class="font-display text-2xl font-bold text-green-800">Giả Lập Quét QR</h3>
+        <p class="text-gray-600 text-sm mt-2">Nhập mã QR của làng chè để xem thông tin chi tiết</p>
+      </div>
+
+      <div class="mb-4">
+        <input
+          type="text"
+          id="qr-input"
+          class="form-input text-center text-xl tracking-widest"
+          placeholder="VD: LC01"
+          maxlength="10"
+        />
+        <p id="qr-error" class="text-red-500 text-sm mt-2 text-center hidden">
+          Mã không hợp lệ. Vui lòng thử lại.
+        </p>
+      </div>
+
+      <div class="bg-amber-50 rounded-xl p-4 mb-6">
+        <p class="text-amber-800 text-sm font-semibold mb-2">💡 Mã QR mẫu:</p>
+        <div class="flex flex-wrap gap-2 justify-center">
+          <span class="bg-white px-3 py-1 rounded-full text-sm text-green-700 font-mono">LC01</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm text-green-700 font-mono">LC02</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm text-green-700 font-mono">LC03</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm text-green-700 font-mono">LC04</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm text-green-700 font-mono">LC05</span>
+          <span class="bg-white px-3 py-1 rounded-full text-sm text-green-700 font-mono">LC06</span>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <button class="btn-primary flex-1" onclick="submitQRCode()">Xác nhận</button>
+        <button
+          class="bg-gray-200 text-gray-700 px-6 py-3 rounded-xl font-semibold hover:bg-gray-300 transition"
+          onclick="closeQRModal()"
+        >
+          Đóng
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Container (nếu bạn muốn dùng, hiện JS đang append popup vào #map) -->
+  <div id="popup-container"></div>
+
+  <!-- JS tách riêng -->
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/ui.js"></script>
+  <script type="module" src="/js/map.js"></script>
 </body>
 </html>
