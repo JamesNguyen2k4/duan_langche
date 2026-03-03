@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="vi" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><%= siteTitle %> - Du Lịch Trà</title>
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body class="h-full">
+  <!-- (GIỮ TOÀN BỘ HTML BODY như file bạn, chỉ thay text động) -->
+  <h1 id="site-title"><%= siteTitle %></h1>
+  <p id="hero-subtitle"><%= heroSubtitle %></p>
+
+  <!-- ... -->
+  <div id="map" class="map-container mb-8" style="height:500px;"></div>
+  <!-- ... -->
+
+  <script src="/js/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+[
+    {
+      "id": 1,
+      "name": "Làng Chè Tân Cương",
+      "code": "LC01",
+      "description": "Cái nôi trà Thái Nguyên...",
+      "story": ["..."],
+      "address": "Xã Tân Cương...",
+      "openingHours": "6:00 - 18:00",
+      "lat": 21.566,
+      "lng": 105.844
+    }
+  ]
