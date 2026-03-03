@@ -43,6 +43,16 @@ window.submitQRCode = function () {
     document.getElementById("qr-input")?.focus();
   }
 };
+window.goBackFromRecommend = function () {
+  // Nếu đang xem chi tiết 1 làng thì quay lại trang chi tiết
+  if (window.currentVillage) {
+    window.showSection("detail");
+    return;
+  }
+
+  // Nếu không có currentVillage thì quay về trang trước đó (home/about)
+  window.showSection(window.previousSection || "home");
+};
 // public/js/ui.js
 export function initUI(data) {
     // để submitQRCode dùng được
