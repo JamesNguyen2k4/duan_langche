@@ -1,13 +1,61 @@
 [
-    {
-      "id": 1,
-      "name": "Làng Chè Tân Cương",
-      "code": "LC01",
-      "description": "Cái nôi trà Thái Nguyên...",
-      "story": ["..."],
-      "address": "Xã Tân Cương...",
-      "openingHours": "6:00 - 18:00",
-      "lat": 21.566,
-      "lng": 105.844
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Làng chè Tân Cương",
+    "code": "LC01",
+    "description": "Làng chè nổi tiếng Thái Nguyên bậc nhất, được xem là “cái nôi” của sự phát triển cây chè Thái Nguyên, diện tích trồng chè lên đến khoảng 400 ha.",
+    "story": [
+      "Làng chè Tân Cương là vùng trồng chè bao gồm 3 xã Tân Cương, Phúc Xuân và Phúc Trìu thuộc huyện Đại Từ. Đây được xem là “cái nôi” của sự phát triển cây chè Thái Nguyên, hiện có diện tích trồng chè lên đến 400 ha. Nhờ điều kiện tự nhiên thuận lợi, chè Tân Cương đạt chất lượng cao cấp, tạo nên danh tiếng cho vùng này.",
+      "Ngày nay, làng chè Tân Cương còn trở thành điểm đến hấp dẫn khách du lịch. Thăm vùng chè này, bạn sẽ được ngắm những đồi chè xanh bạt ngàn trải dài khắp các sườn đồi. Du khách có thể thoải mái ngắm cảnh, chụp ảnh kỷ niệm và đặc biệt là thưởng thức những loại chè ngon tại đây.",
+      "Sản phẩm chè Tân Cương cho nước màu vàng xanh, vị hơi chát nhẹ nhưng hậu ngọt và vị lắng sâu trong miệng. Hương vị ấy là kết tinh trong từng lá chè được trồng và chăm sóc bởi những người nông dân cần mẫn. Khi đến thăm, bạn có thể mua chè về làm quà tặng cho người thân, bạn bè."
+    ],
+    "address": "3 xã Tân Cương, Phúc Xuân và Phúc Trìu, huyện Đại Từ, tỉnh Thái Nguyên",
+    "openingHours": "Chưa cập nhật",
+    "lat": 21.5394,
+    "lng": 105.7750
+  },
+  {
+    "id": 2,
+    "name": "Làng chè La Bằng",
+    "code": "LC02",
+    "description": "Cụm chè ở xã La Bằng (huyện Đại Từ) là vùng trọng điểm của tỉnh, diện tích trồng chè hơn 200 ha, sản phẩm đạt chuẩn VietGAP và có hơn 10 làng nghề truyền thống.",
+    "story": [
+      "Một trong những làng chè nổi tiếng Thái Nguyên hiện nay là cụm chè ở xã La Bằng, huyện Đại Từ. Với tổng diện tích trồng chè hơn 200 ha, vùng chè này là vùng trọng điểm của tỉnh, cung cấp các loại chè chất lượng đạt chuẩn VietGap. Hiện nay ở La Bằng có hơn 10 làng nghề trồng chè truyền thống, cung cấp đa dạng các loại chè ngon đặc sản.",
+      "Du lịch Thái Nguyên và đến La Bằng, du khách có thể tham khảo các loại chè xanh, chè nõn, chè ô lông,… để mua về thưởng thức hoặc làm quà. Nhờ khí hậu mát mẻ, đất đai màu mỡ và bàn tay cẩn thận của người dân địa phương mà chè La Bằng dần khẳng định vị thế trên thị trường.",
+      "Trước đây, khi nhắc đến La Bằng, khách du lịch thường quan tâm đến Suối Kẹm, Suối Cửa Tử, Hồ Núi Cốc,… Tuy nhiên giờ đây làng chè La Bằng cũng trở thành điểm đến được yêu thích. Những đồi chè xanh mướt bao trùm các quả đồi, tạo nên khung cảnh trong trẻo và yên lành."
+    ],
+    "address": "Xã La Bằng, huyện Đại Từ, tỉnh Thái Nguyên",
+    "openingHours": "Chưa cập nhật",
+    "lat": 21.6106,
+    "lng": 105.5592
+  },
+  {
+    "id": 3,
+    "name": "Làng chè Phú Lương",
+    "code": "LC03",
+    "description": "Vùng chè rộng lớn quy tụ nhiều làng nghề, lượng chè đầu ra thuộc nhóm nhiều nhất tỉnh; chè thu hái quanh năm nhờ thổ nhưỡng tốt và nguồn nước sông ổn định.",
+    "story": [
+      "Thái Nguyên có rất nhiều làng chè và Phú Lương là một trong số đó. Địa điểm trồng chè này có diện tích rộng lớn quy tụ nhiều làng nghề, trở thành vùng có lượng chè đầu ra nhiều bậc nhất tỉnh. Chè ở đây được thu hái quanh năm, nhờ vào thổ nhưỡng tốt và nguồn nước sông ổn định.",
+      "Vùng chè huyện Phú Lương có thương hiệu chè Khe Cốc đặc biệt nổi tiếng. Tuy diện tích trồng có quy mô không quá lớn nhưng nhờ phương pháp trồng và sự phát triển các giống chè mới giúp Khe Cốc khẳng định vị thế. Trong tương lai, chè Khe Cốc sẽ dần trở thành một thức uống được yêu thích.",
+      "Chè ở Phú Lương được đánh giá có vị chát dịu nhẹ, hương ngầy ngậy tự nhiên, màu nước xanh đẹp mắt. Đến Phú Lương, du khách có thể thưởng thức tách chè nóng hổi, ngắm cảnh đồi chè xanh bạt ngàn và tìm hiểu nghề trồng chè truyền thống của bà con nơi đây."
+    ],
+    "address": "Huyện Phú Lương, tỉnh Thái Nguyên",
+    "openingHours": "Chưa cập nhật",
+    "lat": 21.7264,
+    "lng": 105.7072
+  },
+  {
+    "id": 4,
+    "name": "Làng chè Trại Cài",
+    "code": "LC04",
+    "description": "Điểm đến thuộc huyện Đồng Hỷ, nổi tiếng với chè có nước sánh vàng như mật ong, chát vừa phải, hậu vị ngọt dịu; diện tích trồng khoảng 600 ha theo tiêu chuẩn VietGAP.",
+    "story": [
+      "Làng chè Trại Cài là điểm đến ở Thái Nguyên được yêu thích, thuộc huyện Đồng Hỷ. Vùng chè này nổi tiếng với loại chè có nước sánh vàng như mật ong, độ chát vừa phải và hậu vị ngọt dịu. Chè ở Trại Cài có phần giống với chè Tân Cương, hương vị thuộc hàng thượng hạng rất được yêu thích.",
+      "Diện tích trồng chè ở Trại Cài khoảng 600 ha, được chăm sóc cẩn thận theo các tiêu chuẩn VietGap, đảm bảo sản phẩm đầu ra chất lượng. Vì thế khi có dịp du lịch tại làng chè này, ngoài ngắm cảnh đẹp đồi chè, bạn nhớ thưởng thức và mua chè ngon về làm quà cho người thân, bạn bè."
+    ],
+    "address": "Huyện Đồng Hỷ, tỉnh Thái Nguyên",
+    "openingHours": "Chưa cập nhật",
+    "lat": 21.6667,
+    "lng": 105.9167
+  }
+]

@@ -1,6 +1,6 @@
 {
-    "photo": [],
-    "culture": [],
-    "relax": [],
-    "experience": []
-  }
+  "photo": ["Check-in đồi chè panorama", "Quay video trải nghiệm", "Thưởng trà tại quán view đẹp"],
+  "culture": ["Nghe kể chuyện lịch sử làng", "Tìm hiểu quy trình sao chè", "Pha trà theo cách truyền thống"],
+  "relax": ["Thiền định giữa đồi chè", "Đi dạo thư thái ngắm cảnh", "Thưởng trà tại quán view đẹp"],
+  "experience": ["Hái chè cùng nông dân", "Học cách sao chè thủ công", "Pha trà theo cách truyền thống"]
+}
