@@ -1,0 +1,118 @@
+{
+    "villageCode": "LC01",
+    "purpose": "culture",
+    "pois": [
+      {
+        "id": "LC01_CUL_001",
+        "name": "Không gian văn hóa Trà Tân Cương (Bảo tàng trà Thái Nguyên)",
+        "category": "culture",
+        "address": "Xóm Soi Vàng, xã Tân Cương, thành phố Thái Nguyên, tỉnh Thái Nguyên",
+        "lat": 21.5621,
+        "lng": 105.7483,
+        "locationNote": "Cách trung tâm TP. Thái Nguyên khoảng 12 km về phía Tây; trên trục đường đi KDL Hồ Núi Cốc",
+        "openingHoursText": "Thường mở cửa cả ngày; có thể nghỉ theo giờ hành chính tùy lịch ban quản lý",
+        "amenities": ["Không gian thưởng trà", "Bãi đỗ xe", "Khu trưng bày sản phẩm trà"],
+        "activities": [
+          "Tham quan trưng bày lịch sử & quy trình sản xuất trà",
+          "Xem hiện vật/không gian văn hóa trà",
+          "Thưởng trà tại khu vực trải nghiệm"
+        ],
+        "sourceNote": "Dữ liệu do người dùng tổng hợp từ Google Maps/Facebook và thông tin tham quan"
+      },
+  
+      {
+        "id": "LC01_CUL_101",
+        "name": "Hợp tác xã chè Hảo Đạt (OCOP 5 sao)",
+        "category": "experience",
+        "address": "Đường Tân Cương, xã Tân Cương, TP. Thái Nguyên",
+        "lat": 21.5542,
+        "lng": 105.7485,
+        "openingHoursText": "",
+        "amenities": ["Không gian thưởng trà", "Đồi chè tham quan", "Khu sản xuất"],
+        "activities": [
+          "Tìm hiểu quy trình sản xuất tại cơ sở",
+          "Thưởng trà",
+          "Tham quan đồi chè"
+        ],
+        "sourceNote": "Dữ liệu do người dùng tổng hợp"
+      },
+      {
+        "id": "LC01_CUL_102",
+        "name": "HTX Chè Trung Du Tân Cương (An Dương Trà)",
+        "category": "culture",
+        "address": "Xóm Hồng Thái II, xã Tân Cương, TP. Thái Nguyên",
+        "plusCode": "GQR7+558",
+        "lat": null,
+        "lng": null,
+        "openingHoursText": "",
+        "amenities": ["Khu bảo tồn chè trung du cổ", "Không gian trải nghiệm cộng đồng (tùy thời điểm)"],
+        "activities": [
+          "Tìm hiểu các gốc chè trung du cổ",
+          "Trải nghiệm du lịch cộng đồng gắn với nghề chè"
+        ],
+        "sourceNote": "Dữ liệu do người dùng tổng hợp (thiếu tọa độ, sẽ bổ sung sau)"
+      },
+      {
+        "id": "LC01_CUL_103",
+        "name": "HTX Chè Tân Cương - Phúc Linh",
+        "category": "experience",
+        "address": "Xóm Hồng Thái, xã Tân Cương, TP. Thái Nguyên",
+        "plusCode": "GQJ7+JQP",
+        "lat": null,
+        "lng": null,
+        "openingHoursText": "",
+        "amenities": [],
+        "activities": [
+          "Tìm hiểu quy trình sản xuất tại cơ sở",
+          "Thưởng trà (tùy lịch tiếp đón)"
+        ],
+        "sourceNote": "Dữ liệu do người dùng tổng hợp (thiếu tọa độ, sẽ bổ sung sau)"
+      },
+      {
+        "id": "LC01_CUL_104",
+        "name": "HTX Chè Thủy Thuật",
+        "category": "experience",
+        "address": "Xóm Hồng Thái II, xã Tân Cương, TP. Thái Nguyên",
+        "lat": null,
+        "lng": null,
+        "openingHoursText": "",
+        "amenities": ["Mô hình chè hữu cơ"],
+        "activities": [
+          "Tìm hiểu mô hình chè hữu cơ",
+          "Thưởng trà (tùy lịch tiếp đón)"
+        ],
+        "sourceNote": "Dữ liệu do người dùng tổng hợp (thiếu tọa độ, sẽ bổ sung sau)"
+      },
+  
+      {
+        "id": "LC01_CUL_201",
+        "name": "HTX Tâm Trà Việt - Cơ sở 3",
+        "category": "experience",
+        "address": "Xóm Nam Thái, xã Tân Cương, TP. Thái Nguyên",
+        "lat": null,
+        "lng": null,
+        "openingHoursText": "",
+        "amenities": [],
+        "activities": [
+          "Tìm hiểu quy trình sản xuất",
+          "Thưởng trà chuẩn vị"
+        ],
+        "sourceNote": "Dữ liệu do người dùng tổng hợp (thiếu tọa độ, sẽ bổ sung sau)"
+      },
+      {
+        "id": "LC01_CUL_202",
+        "name": "Các nhà vườn/xóm chè tại xã Tân Cương (Soi Vàng, Khuôn Nam, ...)",
+        "category": "culture",
+        "address": "Xã Tân Cương, TP. Thái Nguyên (nhiều điểm)",
+        "lat": null,
+        "lng": null,
+        "openingHoursText": "",
+        "amenities": ["Đồi chè", "Trải nghiệm cùng nghệ nhân địa phương (tùy nơi)"],
+        "activities": [
+          "Tham quan đồi chè",
+          "Trải nghiệm pha trà cùng nghệ nhân địa phương"
+        ],
+        "sourceNote": "Dữ liệu do người dùng tổng hợp (điểm tổng quát, cần chốt POI cụ thể sau)"
+      }
+    ]
+  }

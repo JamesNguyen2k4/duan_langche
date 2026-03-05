@@ -1,10 +1,106 @@
 [
-    {
-      "id": 1,
-      "name": "Trà Xanh Thái Nguyên",
-      "flavor": "strong",
-      "weather": ["cool", "rainy"],
-      "description": "Vị đậm đà, chát nhẹ, hậu ngọt thanh.",
-      "icon": "🍵"
+  {
+    "id": "TC_TRA_XANH",
+    "name": "Trà xanh Tân Cương",
+    "icon": "🍵",
+    "originVillageCode": "LC01",
+    "tasteTags": ["strong", "light"],
+    "profile": {
+      "aroma": "hương cốm ngát",
+      "taste": "chát dịu",
+      "aftertaste": "hậu ngọt thanh"
+    },
+    "gradeOptions": ["dac_biet", "thuong_hang", "dac_san"],
+    "brewGuide": {
+      "teaGram": "5-7g",
+      "waterTempC": 100,
+      "firstSteepSec": "30-45s",
+      "notes": "Tráng ấm chén bằng nước sôi trước khi pha."
+    },
+    "priceRef": {
+      "unit": "VND",
+      "note": "Giá tham khảo, thay đổi theo chất lượng và thời điểm.",
+      "examples": [
+        { "pack": "100g", "range": [80000, 300000] },
+        { "pack": "500g", "range": [230000, 1000000] }
+      ]
     }
-  ]
+  },
+  {
+    "id": "TC_CHE_MOC_CAU",
+    "name": "Chè Móc Câu Tân Cương",
+    "icon": "🌿",
+    "originVillageCode": "LC01",
+    "tasteTags": ["strong", "light"],
+    "profile": {
+      "aroma": "hương cốm dịu",
+      "taste": "chát nhẹ đến vừa",
+      "aftertaste": "ngọt thanh lâu"
+    },
+    "gradeOptions": ["pho_bien", "thuong_hang"],
+    "brewGuide": {
+      "teaGram": "5-7g",
+      "waterTempC": 100,
+      "firstSteepSec": "30-45s"
+    }
+  },
+  {
+    "id": "TC_CHE_DINH",
+    "name": "Chè Đinh (cao cấp)",
+    "icon": "⭐",
+    "originVillageCode": "LC01",
+    "tasteTags": ["strong"],
+    "profile": {
+      "aroma": "cốm đậm, tinh tế",
+      "taste": "chát rất dịu",
+      "aftertaste": "ngọt sâu, kéo dài"
+    },
+    "gradeOptions": ["cao_cap"],
+    "priceRef": {
+      "unit": "VND",
+      "note": "Giá tham khảo theo bài viết, có thể biến động.",
+      "examples": [
+        { "pack": "1kg", "range": [2500000, 3500000] }
+      ]
+    }
+  },
+  {
+    "id": "TC_CHE_TOM",
+    "name": "Chè Tôm",
+    "icon": "🦐",
+    "originVillageCode": "LC01",
+    "tasteTags": ["strong", "light"],
+    "profile": {
+      "aroma": "hương cốm",
+      "taste": "chát dịu",
+      "aftertaste": "ngọt thanh"
+    },
+    "gradeOptions": ["trung_cao", "cao_cap"]
+  },
+  {
+    "id": "TC_TRA_UOP_SEN",
+    "name": "Trà ướp sen",
+    "icon": "🌸",
+    "originVillageCode": "LC01",
+    "tasteTags": ["fragrant", "light"],
+    "profile": {
+      "aroma": "hương sen rõ, dịu",
+      "taste": "êm",
+      "aftertaste": "ngọt nhẹ"
+    },
+    "gradeOptions": ["thuong_hang", "dac_san"]
+  },
+  {
+    "id": "TC_TRA_UOP_NHAI",
+    "name": "Trà ướp hoa nhài",
+    "icon": "🌼",
+    "originVillageCode": "LC01",
+    "tasteTags": ["fragrant", "light"],
+    "profile": {
+      "aroma": "hương nhài thơm",
+      "taste": "êm",
+      "aftertaste": "ngọt nhẹ"
+    },
+    "gradeOptions": ["pho_bien", "thuong_hang"]
+  }
+]
