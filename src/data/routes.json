@@ -1,43 +1,39 @@
 {
     "LC01": {
       "full": {
-        "title": "Tour trải nghiệm trọn vẹn làng chè Tân Cương (5 bước)",
-        "weatherSuggestion": ["sunny", "cool", "rainy"],
+        "title": "Tour trải nghiệm trọn vẹn làng chè Tân Cương",
+        "weatherSuggestion": ["sunny", "cool"],
         "steps": [
           {
-            "title": "Khám phá văn hóa trà tại Không gian văn hóa Trà Tân Cương",
-            "where": "Không gian văn hóa Trà Tân Cương (Bảo tàng trà Thái Nguyên) — Xóm Soi Vàng, xã Tân Cương, TP. Thái Nguyên (GPS ~21.5621, 105.7483)",
-            "what": "Tham quan trưng bày lịch sử vùng chè và quy trình sản xuất trà; xem hiện vật/dụng cụ làm trà; nghe giới thiệu câu chuyện nghề trà; thưởng trà tại không gian trải nghiệm.",
+            "title": "Khám phá văn hóa trà Tân Cương",
+            "where": "Không gian văn hóa Trà Tân Cương (Bảo tàng trà Thái Nguyên) – Xóm Soi Vàng, xã Tân Cương, TP. Thái Nguyên (GPS: 21.5621, 105.7483)",
+            "what": "Tham quan khu trưng bày hiện vật về lịch sử và quy trình sản xuất trà; tìm hiểu câu chuyện vùng chè Tân Cương; thưởng trà miễn phí tại khu trải nghiệm.",
             "durationMin": 45
           },
           {
             "title": "Check-in đồi chè Tân Cương",
-            "where": "Đồi chè khu vực xã Tân Cương (gợi ý: tuyến đường vào KDL Hồ Núi Cốc qua Tân Cương – chọn điểm có view luống chè đẹp)",
-            "what": "Chụp ảnh toàn cảnh luống chè, quay video ngắn; ưu tiên khung giờ sáng hoặc xế chiều để ánh sáng đẹp; chụp ảnh concept “văn hóa trà” với ấm/chén nếu có chuẩn bị.",
+            "where": "Khu đồi chè Tân Cương – các xóm Soi Vàng, Khuôn Nam, Hồng Thái (xã Tân Cương, TP. Thái Nguyên)",
+            "what": "Tản bộ giữa các luống chè xanh; chụp ảnh toàn cảnh đồi chè; trải nghiệm không khí vùng chè và giao lưu với người dân địa phương.",
             "durationMin": 35
           },
           {
-            "title": "Trải nghiệm hái chè & xem/làm trà tại hợp tác xã",
-            "where": "HTX chè Hảo Đạt — Đường Tân Cương, xã Tân Cương, TP. Thái Nguyên (GPS ~21.5542, 105.7485)",
-            "what": "Học cách chọn búp và hái đúng kỹ thuật; tham quan khu sản xuất; trải nghiệm sao/vò/sấy (tùy lịch tiếp đón); tìm hiểu tiêu chuẩn trà ngon và quy trình kiểm soát chất lượng.",
-            "durationMin": 75
+            "title": "Trải nghiệm hái chè và xem quy trình làm trà",
+            "where": "HTX Chè Hảo Đạt – Đường Tân Cương, xã Tân Cương, TP. Thái Nguyên (GPS: 21.5542, 105.7485)",
+            "what": "Học cách chọn và hái búp chè đúng kỹ thuật; tham quan khu sản xuất; quan sát quy trình sao, vò và sấy trà; tìm hiểu tiêu chuẩn chất lượng trà Tân Cương.",
+            "durationMin": 70
           },
           {
-            "title": "Thưởng thức trà (thành quả) & học pha trà cơ bản",
-            "where": "Tại HTX/cơ sở trải nghiệm (ưu tiên nơi có không gian thưởng trà) hoặc HTX Tâm Trà Việt - Cơ sở 3 — Xóm Nam Thái, xã Tân Cương, TP. Thái Nguyên",
-            "what": "Thưởng trà ngay sau trải nghiệm; học cách tráng ấm/chén, định lượng trà, thời gian hãm; cảm nhận hương–vị–hậu; chụp ảnh lưu niệm phong cách trà đạo.",
+            "title": "Thưởng trà và học pha trà truyền thống",
+            "where": "HTX Tâm Trà Việt – Cơ sở 3, Xóm Nam Thái, xã Tân Cương, TP. Thái Nguyên",
+            "what": "Thưởng thức trà Tân Cương chuẩn vị; học cách tráng ấm, pha trà và cảm nhận hương vị; giao lưu với người làm trà hoặc nghệ nhân địa phương.",
             "durationMin": 45
           },
           {
-            "title": "Mua trà & quà lưu niệm mang về",
-            "where": "Điểm bán trà uy tín tại Tân Cương (ưu tiên ngay tại HTX/cơ sở sản xuất đã tham quan) — hoặc gian hàng/điểm giới thiệu sản phẩm trà địa phương",
-            "what": "Chọn loại trà theo sở thích (đậm/nhẹ/thơm); kiểm tra bao bì, nguồn gốc; gợi ý mua quà: trà xanh Tân Cương, móc câu, trà ướp hương; đóng gói làm quà, chụp ảnh set trà lưu niệm.",
+            "title": "Mua trà đặc sản và quà lưu niệm",
+            "where": "Các điểm bán trà uy tín tại xã Tân Cương (HTX Chè Hảo Đạt, HTX Chè Trung Du Tân Cương – An Dương Trà, HTX Chè Phúc Linh, HTX Chè Thủy Thuật)",
+            "what": "Lựa chọn các loại trà đặc sản như trà móc câu, trà đinh hoặc trà ướp hương; tìm hiểu cách phân biệt trà ngon; mua quà biếu và đóng gói mang về.",
             "durationMin": 30
           }
-        ],
-        "notes": [
-          "Một số hoạt động trải nghiệm (hái chè, sao chè) có thể cần liên hệ trước để được hướng dẫn và đảm bảo an toàn.",
-          "Giờ mở cửa/tổ chức trải nghiệm phụ thuộc lịch của đơn vị quản lý/HTX."
         ]
       }
     }

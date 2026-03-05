@@ -8,6 +8,11 @@ function readJson(relPath) {
   return txt ? JSON.parse(txt) : (relPath.endsWith(".json") ? [] : {});
 }
 
+/**
+ * Chọn danh sách trà theo taste (strong/light/fragrant) + ưu tiên đúng villageCode.
+ * - Trả về NHIỀU hơn 2 loại (mặc định trả hết list phù hợp).
+ * - Có sort theo "gu" để loại phù hợp lên trước.
+ */
 function pickTeasByTaste(teaTypes, taste, villageCode) {
   const list = Array.isArray(teaTypes) ? teaTypes : [];
   const tasteKey = String(taste || "").toLowerCase();
@@ -17,23 +22,31 @@ function pickTeasByTaste(teaTypes, taste, villageCode) {
     Array.isArray(t.tasteTags) &&
     t.tasteTags.map(x => String(x).toLowerCase()).includes(tag);
 
-  // Lọc theo làng trước
+  // 1) Lọc theo làng trước (ưu tiên đúng làng)
   let pool = list.filter(t => String(t.originVillageCode || "").toUpperCase() === vCode);
   if (pool.length === 0) pool = list;
 
-  // Chỉ giữ những trà có chứa tasteKey
+  // 2) Lọc theo tasteTag
   let matched = pool.filter(t => hasTag(t, tasteKey));
-  if (matched.length === 0) matched = pool;
 
-  // Score để sort theo "gu"
+  // Nếu làng hiện chưa có loại nào match taste -> fallback theo taste ở toàn bộ list
+  if (matched.length === 0) {
+    matched = list.filter(t => hasTag(t, tasteKey));
+  }
+
+  // Nếu vẫn rỗng (data sai) -> fallback pool
+  if (matched.length === 0) {
+    matched = pool;
+  }
+
+  // 3) Score để sort theo "gu"
   const score = (t) => {
     const isStrong = hasTag(t, "strong");
     const isLight = hasTag(t, "light");
     const isFragrant = hasTag(t, "fragrant");
 
-    // Ưu tiên theo taste
     if (tasteKey === "strong") {
-      // strong-only > strong+light > fragrant
+      // strong-only > strong+light > strong
       if (isStrong && !isLight && !isFragrant) return 100;
       if (isStrong && isLight) return 80;
       if (isStrong) return 70;
@@ -41,7 +54,7 @@ function pickTeasByTaste(teaTypes, taste, villageCode) {
     }
 
     if (tasteKey === "light") {
-      // light-only > fragrant+light > light+strong
+      // light-only > fragrant+light > light+strong > light
       if (isLight && !isStrong && !isFragrant) return 100;
       if (isFragrant && isLight) return 90;
       if (isLight && isStrong) return 70;
@@ -50,7 +63,7 @@ function pickTeasByTaste(teaTypes, taste, villageCode) {
     }
 
     if (tasteKey === "fragrant") {
-      // fragrant+light > fragrant-only > others
+      // fragrant+light > fragrant-only
       if (isFragrant && isLight) return 100;
       if (isFragrant) return 90;
       return 0;
@@ -61,7 +74,10 @@ function pickTeasByTaste(teaTypes, taste, villageCode) {
 
   matched.sort((a, b) => score(b) - score(a));
 
-  const picked = matched.slice(0, 2);
+  // ✅ Trả nhiều hơn 2 loại:
+  // - Nếu bạn muốn giới hạn để UI không quá dài, set MAX_TEA_RESULTS = 5 (hoặc số bạn thích)
+  const MAX_TEA_RESULTS = null; // null = không giới hạn
+  const picked = MAX_TEA_RESULTS ? matched.slice(0, MAX_TEA_RESULTS) : matched;
 
   return picked.map(t => ({
     id: t.id || "",
@@ -72,25 +88,24 @@ function pickTeasByTaste(teaTypes, taste, villageCode) {
     icon: t.icon || "🍵"
   }));
 }
+
 exports.recommend = async (req, res) => {
   try {
     const body = req.body || {};
 
     const villageCode = String(body.villageCode || "").trim().toUpperCase();
- // photo|culture|relax|experience
-    const taste = String(body.taste || "").trim();     // strong|light|fragrant
+    const taste = String(body.taste || "").trim(); // strong|light|fragrant
 
     if (!villageCode) {
       return res.status(400).json({ detail: "Thiếu villageCode (mã làng chè)." });
     }
-  
     if (!taste) {
       return res.status(400).json({ detail: "Thiếu taste (thói quen uống trà)." });
     }
 
     const villages = readJson("villages.json");
     const teaTypes = readJson("teaTypes.json");
-    const routes = readJson("routes.json"); // <-- file mới bạn cần tạo
+    const routes = readJson("routes.json");
 
     const village = (villages || []).find(v => String(v.code || "").toUpperCase() === villageCode);
     if (!village) {
@@ -102,11 +117,10 @@ exports.recommend = async (req, res) => {
 
     if (!routePack) {
       return res.status(404).json({
-        detail: `Chưa có tuyến cho làng ${villageCode} với nhu cầu "${purpose}".`
+        detail: `Chưa có tuyến full cho làng ${villageCode}.`
       });
     }
 
-    // Ép chuẩn 3 bước
     const steps = Array.isArray(routePack.steps) ? routePack.steps : [];
     if (steps.length < 3) {
       return res.status(500).json({
@@ -116,18 +130,11 @@ exports.recommend = async (req, res) => {
 
     const teas = pickTeasByTaste(teaTypes, taste, villageCode);
 
-    // Explanation: làm rule-based để ổn định (không phụ thuộc Gemini)
-    const purposeLabelMap = {
-      photo: "chụp ảnh check-in",
-      culture: "tìm hiểu văn hóa",
-      relax: "thư giãn nghỉ ngơi",
-      experience: "trải nghiệm hái chè"
-    };
-
     const explanation =
       `Đây là tuyến trải nghiệm đầy đủ tại ${village.name}, ` +
       `bao gồm khám phá văn hóa trà, check-in đồi chè, trải nghiệm làm trà, thưởng trà và mua quà mang về. ` +
       `Loại trà được gợi ý dựa trên thói quen uống trà "${taste}".`;
+
     return res.json({
       village: { code: villageCode, name: village.name },
       weatherSuggestion: routePack.weatherSuggestion || [],
