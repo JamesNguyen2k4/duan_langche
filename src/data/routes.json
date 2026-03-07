@@ -36,5 +36,155 @@
           }
         ]
       }
+    },
+     "LC02": {
+    "full": {
+      "title": "Tour trải nghiệm trọn vẹn làng chè La Bằng",
+      "weatherSuggestion": ["sunny", "cool", "rainy"],
+      "steps": [
+        {
+          "title": "Khám phá văn hóa và nghề chè La Bằng",
+          "where": "Hợp tác xã chè La Bằng – Xóm Tân Sơn, xã La Bằng, huyện Đại Từ, tỉnh Thái Nguyên (GPS: 21.6367, 105.6754)",
+          "what": "Tìm hiểu lịch sử và văn hóa làng chè La Bằng; tham quan khu trưng bày và khu chế biến chè; quan sát máy sấy chè, đóng gói chè; thưởng trà La Bằng do nghệ nhân pha.",
+          "durationMin": 45
+        },
+        {
+          "title": "Check-in đồi chè xanh bát ngát",
+          "where": "Đồi chè Tân Sơn – Xóm Tân Sơn, xã La Bằng, huyện Đại Từ, tỉnh Thái Nguyên (GPS: 21.6398, 105.6732)",
+          "what": "Chụp ảnh giữa đồi chè xanh; tìm hiểu cách chăm sóc và thu hoạch chè; quan sát không gian sản xuất chè ngoài thực địa; giao lưu với người dân địa phương.",
+          "durationMin": 35
+        },
+        {
+          "title": "Trải nghiệm hái chè cùng người dân địa phương",
+          "where": "Đồi chè Tân Sơn – Xóm Tân Sơn, xã La Bằng, huyện Đại Từ, tỉnh Thái Nguyên (GPS: 21.6398, 105.6732)",
+          "what": "Học cách hái chè đúng kỹ thuật “một tôm hai lá”; trực tiếp hái chè cùng người dân; tìm hiểu thời điểm thu hoạch và lựa chọn búp chè đạt chuẩn.",
+          "durationMin": 45
+        },
+        {
+          "title": "Tự tay sao chè, vò chè và hoàn thiện mẻ chè",
+          "where": "Nhà chế biến chè truyền thống – Xóm Tân Sơn, xã La Bằng, huyện Đại Từ, tỉnh Thái Nguyên (GPS gần trung tâm làng: 21.6363, 105.6761)",
+          "what": "Tham gia sao chè bằng chảo gang; vò chè bằng tay; sấy chè và tạo hình cánh chè; tự tay làm ra mẻ chè của mình và đóng gói mang về.",
+          "durationMin": 60
+        },
+        {
+          "title": "Thưởng trà La Bằng và học cảm trà",
+          "where": "Khu trải nghiệm trà / nhà vườn chè La Bằng – khu gần trung tâm làng, xã La Bằng, huyện Đại Từ, tỉnh Thái Nguyên (GPS: 21.6379, 105.6746)",
+          "what": "Thưởng trà La Bằng mới sao; học cách nhìn màu nước trà, ngửi hương và cảm nhận vị trà; nghe chia sẻ về nghề làm chè; nghỉ ngơi và có thể dùng bữa với ẩm thực địa phương.",
+          "durationMin": 45
+        },
+        {
+          "title": "Mua trà đặc sản và quà mang về",
+          "where": "Hợp tác xã chè La Bằng – Xóm Tân Sơn, xã La Bằng, huyện Đại Từ, tỉnh Thái Nguyên (GPS: 21.6367, 105.6754)",
+          "what": "Mua các sản phẩm chè đặc sản như chè móc câu, chè nõn tôm, chè đinh; tìm hiểu cách chọn trà ngon; đóng gói làm quà tặng và quà lưu niệm mang về.",
+          "durationMin": 30
+        },
+        {
+          "title": "Thư giãn thiên nhiên và ngắm cảnh vùng chè",
+          "where": "Chọn 1 trong 2 điểm: Suối Kẹm – khu rừng phía tây làng chè La Bằng (GPS: 21.6526, 105.6624) hoặc Đồi chè La Bằng phía tây làng, nhìn về Tam Đảo (GPS: 21.6417, 105.6708)",
+          "what": "Đi bộ khám phá thiên nhiên, chụp ảnh phong cảnh rừng - suối hoặc ngắm toàn cảnh đồi chè; thư giãn, picnic nhẹ; chụp ảnh hoàng hôn trên đồi chè nếu đi buổi chiều.",
+          "durationMin": 40
+        }
+      ]
     }
+  },
+  "LC03": {
+  "full": {
+    "title": "Tour trải nghiệm làng chè Phú Lương – Khe Cốc",
+    "weatherSuggestion": ["sunny", "cool"],
+    "steps": [
+      {
+        "title": "Khám phá làng nghề chè Khe Cốc",
+        "where": "Làng chè Khe Cốc – xã Tức Tranh, huyện Phú Lương, tỉnh Thái Nguyên (GPS: 21.7057, 105.8215)",
+        "what": "Tìm hiểu lịch sử làng nghề chè Khe Cốc; gặp gỡ các hộ gia đình làm chè lâu năm; giới thiệu về giống chè và vùng trồng chè Phú Lương.",
+        "durationMin": 30
+      },
+      {
+        "title": "Trải nghiệm hái chè trên đồi chè Tức Tranh",
+        "where": "Đồi chè Tức Tranh – Phú Lương, Thái Nguyên (GPS: 21.7072, 105.8246)",
+        "what": "Học cách hái chè theo tiêu chuẩn '1 tôm 2 lá'; chụp ảnh giữa đồi chè xanh; tìm hiểu cách chăm sóc và thu hoạch chè; trải nghiệm đời sống người trồng chè.",
+        "durationMin": 60
+      },
+      {
+        "title": "Trải nghiệm chế biến chè truyền thống",
+        "where": "Nhà chế biến chè truyền thống – xóm Khe Cốc, xã Tức Tranh (GPS: 21.7061, 105.8203)",
+        "what": "Tham gia sao chè bằng chảo gang; vò chè bằng tay; sấy chè và tạo hình cánh chè; tự tay làm ra mẻ chè của mình.",
+        "durationMin": 60
+      },
+      {
+        "title": "Thưởng trà và trải nghiệm ẩm thực địa phương",
+        "where": "Nhà vườn chè tại xóm Khe Cốc – xã Tức Tranh, Phú Lương",
+        "what": "Thưởng thức trà xanh Phú Lương mới sao; học cách cảm nhận hương vị trà; ăn trưa với các món đặc sản địa phương như gà đồi, cá suối, rau rừng.",
+        "durationMin": 60
+      },
+      {
+        "title": "Khám phá văn hóa địa phương",
+        "where": "Làng văn hóa xóm Đồng Tâm – huyện Phú Lương (GPS: 21.7014, 105.8331)",
+        "what": "Tìm hiểu đời sống người dân vùng chè; khám phá văn hóa dân tộc miền núi; tham quan nhà truyền thống.",
+        "durationMin": 40
+      },
+      {
+        "title": "Tham quan di tích lịch sử Đền Đuổm",
+        "where": "Đền Đuổm – xã Động Đạt, huyện Phú Lương (GPS: 21.7268, 105.8440)",
+        "what": "Tham quan di tích lịch sử quốc gia; tìm hiểu về danh tướng Dương Tự Minh; chụp ảnh phong cảnh núi rừng.",
+        "durationMin": 40
+      },
+      {
+        "title": "Check-in đồi chè Phú Lương lúc hoàng hôn",
+        "where": "Đồi chè Phú Lương – khu Tức Tranh (GPS: 21.7094, 105.8237)",
+        "what": "Ngắm toàn cảnh đồi chè; chụp ảnh hoàng hôn trên đồi chè; thưởng trà nhẹ giữa không gian thiên nhiên.",
+        "durationMin": 30
+      }
+    ]
+  }
+},
+"LC04": {
+  "full": {
+    "title": "Tour trải nghiệm làng chè Trại Cài – Đồng Hỷ",
+    "weatherSuggestion": ["sunny", "cool"],
+    "steps": [
+      {
+        "title": "Khám phá làng chè Trại Cài",
+        "where": "Xóm Trại Cài – xã Minh Lập – huyện Đồng Hỷ – tỉnh Thái Nguyên (GPS: 21.7447, 105.8735)",
+        "what": "Tìm hiểu lịch sử làng nghề chè Trại Cài; gặp gỡ các hộ gia đình làm chè lâu năm; giới thiệu về giống chè và đặc điểm vùng chè Đồng Hỷ; tham quan vườn chè truyền thống.",
+        "durationMin": 30
+      },
+      {
+        "title": "Trải nghiệm hái chè trên đồi chè Minh Lập",
+        "where": "Đồi chè Trại Cài – xã Minh Lập – huyện Đồng Hỷ (GPS: 21.7471, 105.8709)",
+        "what": "Học cách hái chè theo tiêu chuẩn '1 tôm 2 lá'; tìm hiểu cách chăm sóc và thu hoạch chè; chụp ảnh giữa đồi chè xanh; trải nghiệm đời sống người trồng chè.",
+        "durationMin": 60
+      },
+      {
+        "title": "Trải nghiệm chế biến chè truyền thống",
+        "where": "Nhà chế biến chè hộ gia đình – xóm Trại Cài (GPS: 21.7442, 105.8721)",
+        "what": "Tham gia sao chè bằng chảo gang; vò chè bằng tay; sấy chè và tạo hình cánh chè; tự tay làm ra mẻ chè của mình.",
+        "durationMin": 60
+      },
+      {
+        "title": "Thưởng trà Trại Cài và ẩm thực địa phương",
+        "where": "Nhà vườn chè Trại Cài – xã Minh Lập, Đồng Hỷ",
+        "what": "Thưởng thức trà Trại Cài mới sao; học cách thưởng trà Thái Nguyên; ăn trưa với các món đặc sản địa phương như gà đồi, cá suối và rau rừng.",
+        "durationMin": 60
+      },
+      {
+        "title": "Tham quan hợp tác xã chè Trại Cài",
+        "where": "HTX chè Trại Cài – xã Minh Lập, Đồng Hỷ (GPS: 21.7463, 105.8752)",
+        "what": "Tham quan khu sản xuất chè; tìm hiểu quy trình chế biến chè hiện đại; nghe giới thiệu về các sản phẩm chè đặc trưng của vùng Trại Cài.",
+        "durationMin": 40
+      },
+      {
+        "title": "Mua chè đặc sản Trại Cài",
+        "where": "Cửa hàng chè Trại Cài – xã Minh Lập, Đồng Hỷ",
+        "what": "Mua các sản phẩm chè nổi tiếng như chè móc câu, chè nõn tôm, chè đinh; tìm hiểu cách phân biệt chè ngon và cách bảo quản chè.",
+        "durationMin": 30
+      },
+      {
+        "title": "Check-in đồi chè Trại Cài lúc hoàng hôn",
+        "where": "Đồi chè khu cao Minh Lập – Trại Cài (GPS: 21.7489, 105.8698)",
+        "what": "Ngắm toàn cảnh đồi chè Trại Cài; chụp ảnh hoàng hôn trên đồi chè; thưởng trà nhẹ giữa không gian thiên nhiên.",
+        "durationMin": 30
+      }
+    ]
+  }
+}
   }

@@ -102,5 +102,243 @@
       "aftertaste": "ngọt nhẹ"
     },
     "gradeOptions": ["pho_bien", "thuong_hang"]
-  }
+  },
+  {
+    "id": "LB_CHE_NON_TOM",
+    "name": "Chè Nõn Tôm La Bằng",
+    "icon": "🍃",
+    "originVillageCode": "LC02",
+    "tasteTags": ["light", "fragrant"],
+    "profile": {
+      "aroma": "hương chè thanh, dịu",
+      "taste": "chát dịu",
+      "aftertaste": "hậu ngọt sâu"
+    },
+    "gradeOptions": ["dac_san", "thuong_hang"],
+    "notes": "Loại chè đặc sản, thường hái theo chuẩn 1 tôm 1 lá, nước xanh vàng đẹp."
+  },
+  {
+    "id": "LB_CHE_MOC_CAU",
+    "name": "Chè Móc Câu La Bằng",
+    "icon": "🌿",
+    "originVillageCode": "LC02",
+    "tasteTags": ["strong", "light"],
+    "profile": {
+      "aroma": "hương thơm tự nhiên",
+      "taste": "đậm đà",
+      "aftertaste": "ngọt thanh"
+    },
+    "gradeOptions": ["pho_bien", "dac_san"],
+    "notes": "Cánh chè xoăn nhỏ, là dòng chè được nhiều người ưa chuộng tại La Bằng."
+  },
+  {
+    "id": "LB_CHE_DINH",
+    "name": "Chè Đinh La Bằng",
+    "icon": "⭐",
+    "originVillageCode": "LC02",
+    "tasteTags": ["strong", "fragrant"],
+    "profile": {
+      "aroma": "hương cốm đặc trưng",
+      "taste": "vị tinh tế, đậm vừa",
+      "aftertaste": "ngọt sâu, kéo dài"
+    },
+    "gradeOptions": ["cao_cap", "thuong_hang"],
+    "notes": "Hái từ những búp chè chưa nở, sản lượng ít, thuộc dòng chè thượng hạng."
+  },
+  {
+    "id": "LB_CHE_O_LONG",
+    "name": "Chè Ô Long La Bằng",
+    "icon": "🍂",
+    "originVillageCode": "LC02",
+    "tasteTags": ["strong", "fragrant"],
+    "profile": {
+      "aroma": "hương thơm bền lâu",
+      "taste": "đậm đà",
+      "aftertaste": "êm, lưu hương"
+    },
+    "gradeOptions": ["dac_san", "cao_cap"],
+    "notes": "Canh tác theo quy trình khắt khe, phù hợp với người thích trà thơm và đậm."
+  },
+  {
+    "id": "LB_CHE_XANH",
+    "name": "Chè xanh La Bằng",
+    "icon": "🍵",
+    "originVillageCode": "LC02",
+    "tasteTags": ["light", "strong"],
+    "profile": {
+      "aroma": "hương chè truyền thống",
+      "taste": "đậm nhẹ cân bằng",
+      "aftertaste": "ngọt dịu"
+    },
+    "gradeOptions": ["pho_bien", "truyen_thong"],
+    "notes": "Dòng chè thông dụng, được chế biến thủ công hoặc công nghiệp, dễ uống và phổ biến."
+  },
+  {
+    "id": "PL_CHE_DINH",
+    "name": "Chè Đinh Phú Lương",
+    "icon": "⭐",
+    "originVillageCode": "LC03",
+    "tasteTags": ["strong", "fragrant"],
+    "profile": {
+      "aroma": "hương cốm non đậm",
+      "taste": "vị đậm, tinh tế",
+      "aftertaste": "ngọt sâu và kéo dài"
+    },
+    "gradeOptions": ["cao_cap", "thuong_hang"],
+    "notes": "Loại trà cao cấp nhất, được làm từ những búp chè non chưa nở (đinh trà)."
+  },
+  {
+    "id": "PL_CHE_MOC_CAU",
+    "name": "Chè Móc Câu Phú Lương",
+    "icon": "🌿",
+    "originVillageCode": "LC03",
+    "tasteTags": ["strong", "light"],
+    "profile": {
+      "aroma": "hương trà tự nhiên",
+      "taste": "đậm đà đặc trưng",
+      "aftertaste": "ngọt thanh"
+    },
+    "gradeOptions": ["pho_bien", "dac_san"],
+    "notes": "Cánh trà xoăn như móc câu, hái theo tiêu chuẩn 1 tôm 2 lá."
+  },
+  {
+    "id": "PL_THANH_HAI_TRA",
+    "name": "Thanh Hải Trà Phú Lương",
+    "icon": "🍃",
+    "originVillageCode": "LC03",
+    "tasteTags": ["light", "fragrant"],
+    "profile": {
+      "aroma": "hương trà thanh",
+      "taste": "êm dịu",
+      "aftertaste": "ngọt nhẹ"
+    },
+    "gradeOptions": ["thuong_hang", "qua_bieu"],
+    "notes": "Dòng trà thương hiệu của làng chè Phú Lương, thường có các phiên bản thượng hạng hoặc hộp quà."
+  },
+  {
+    "id": "PL_BUP_CHE_VANG",
+    "name": "Búp Chè Vàng Phú Lương",
+    "icon": "🍂",
+    "originVillageCode": "LC03",
+    "tasteTags": ["light", "fragrant"],
+    "profile": {
+      "aroma": "hương thơm dịu",
+      "taste": "chát nhẹ",
+      "aftertaste": "ngọt thanh"
+    },
+    "gradeOptions": ["dac_san", "qua_bieu"],
+    "notes": "Đặc sản chè có màu vàng đặc trưng, thường được dùng làm quà biếu."
+  },
+  {
+    "id": "PL_HONG_TRA",
+    "name": "Hồng Trà Phú Lương",
+    "icon": "🍁",
+    "originVillageCode": "LC03",
+    "tasteTags": ["strong", "fragrant"],
+    "profile": {
+      "aroma": "hương mật ong nhẹ",
+      "taste": "đậm và êm",
+      "aftertaste": "ngọt dịu"
+    },
+    "gradeOptions": ["dac_san"],
+    "notes": "Được chế biến từ giống chè trung du cổ, tạo hương vị khác biệt so với trà xanh truyền thống."
+  },
+  {
+    "id": "PL_BACH_TRA",
+    "name": "Bạch Trà Phú Lương",
+    "icon": "🌼",
+    "originVillageCode": "LC03",
+    "tasteTags": ["light", "fragrant"],
+    "profile": {
+      "aroma": "hương hoa nhẹ",
+      "taste": "êm dịu",
+      "aftertaste": "ngọt thanh kéo dài"
+    },
+    "gradeOptions": ["cao_cap"],
+    "notes": "Trà chế biến ít oxy hóa, giữ nguyên hương vị tự nhiên của búp chè."
+  },
+  {
+    "id": "PL_TRA_DONG_CHI",
+    "name": "Trà Đông Chí Phú Lương",
+    "icon": "❄️",
+    "originVillageCode": "LC03",
+    "tasteTags": ["strong", "fragrant"],
+    "profile": {
+      "aroma": "hương trà đậm đặc",
+      "taste": "đậm sâu",
+      "aftertaste": "ngọt bền"
+    },
+    "gradeOptions": ["dac_san"],
+    "notes": "Loại trà thu hoạch vào tiết Đông Chí, khi cây chè tích tụ nhiều dưỡng chất."
+  },
+    {
+      "id": "TC_TRUNG_DU",
+      "name": "Chè Trung Du Trại Cài",
+      "icon": "🍵",
+      "originVillageCode": "LC04",
+      "tasteTags": ["strong"],
+      "profile": {
+        "aroma": "hương cốm non đậm",
+        "taste": "chát đậm",
+        "aftertaste": "ngọt sâu kéo dài"
+      },
+      "gradeOptions": ["truyen_thong", "dac_san"],
+      "notes": "Giống chè cổ truyền của Thái Nguyên, nổi tiếng với nước trà vàng óng như mật ong."
+    },
+    {
+      "id": "TC_LAI_F1",
+      "name": "Chè Lai F1 Trại Cài",
+      "icon": "🌿",
+      "originVillageCode": "LC04",
+      "tasteTags": ["light", "fragrant"],
+      "profile": {
+        "aroma": "hương trà mộc mạc",
+        "taste": "chát mượt",
+        "aftertaste": "ngọt thanh"
+      },
+      "gradeOptions": ["pho_bien", "thuong_hang"],
+      "notes": "Giống chè lai phổ biến tại Thái Nguyên, năng suất cao và hương vị dễ uống."
+    },
+    {
+      "id": "TC_BAT_TIEN",
+      "name": "Chè Bát Tiên Trại Cài",
+      "icon": "🌼",
+      "originVillageCode": "LC04",
+      "tasteTags": ["light", "fragrant"],
+      "profile": {
+        "aroma": "hương hoa nhẹ",
+        "taste": "thanh dịu",
+        "aftertaste": "ngọt nhẹ"
+      },
+      "gradeOptions": ["thuong_hang", "cao_cap"],
+      "notes": "Giống chè có hương thơm tự nhiên, nước xanh vàng đẹp."
+    },
+    {
+      "id": "TC_CHE_777",
+      "name": "Chè Cành 777 Trại Cài",
+      "icon": "🍃",
+      "originVillageCode": "LC04",
+      "tasteTags": ["strong", "light"],
+      "profile": {
+        "aroma": "hương trà đậm",
+        "taste": "đậm vừa",
+        "aftertaste": "ngọt dịu"
+      },
+      "gradeOptions": ["pho_bien", "dac_san"],
+      "notes": "Giống chè cành năng suất cao, được trồng nhiều tại vùng Đồng Hỷ."
+    },
+    {
+      "id": "TC_PHUC_VAN_TIEN",
+      "name": "Chè Phúc Vân Tiên Trại Cài",
+      "icon": "🍂",
+      "originVillageCode": "LC04",
+      "tasteTags": ["fragrant", "light"],
+      "profile": {
+        "aroma": "hương thơm đặc trưng",
+        "taste": "êm dịu",
+        "aftertaste": "ngọt thanh"
+      },
+      "gradeOptions": ["dac_san"],
+      "notes": "Giống chè cành mới được trồng tại Trại Cài, có hương thơm nổi bật."
+    }
 ]

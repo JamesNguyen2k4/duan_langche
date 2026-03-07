@@ -23,8 +23,7 @@ async function fetchJson(url) {
 async function loadData() {
   const [villages, teaTypes, activities] = await Promise.all([
     fetchJson("/api/v1/villages"),
-    fetchJson("/api/v1/tea-types"),
-    fetchJson("/api/v1/activities")
+    fetchJson("/api/v1/tea-types")
   ]);
 
   return { villages, teaTypes, activities };

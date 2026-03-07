@@ -10,5 +10,3 @@ function readJson(relPath, fallback) {
 
 exports.getVillages = (req, res) => res.json(readJson("villages.json", []));
 exports.getTeaTypes = (req, res) => res.json(readJson("teaTypes.json", []));
-exports.getActivities = (req, res) =>
-  res.json(readJson("activities.json", { photo: [], culture: [], relax: [], experience: [] }));
