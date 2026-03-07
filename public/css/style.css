@@ -354,3 +354,23 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #16a34a;
 }
+.village-popup {
+  width: 180px;
+  text-align: center;
+}
+
+.village-popup__image {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.village-popup__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #166534;
+  margin: 0;
+}
