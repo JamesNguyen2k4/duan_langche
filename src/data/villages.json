@@ -11,6 +11,7 @@
     ],
     "address": "3 xã Tân Cương, Phúc Xuân và Phúc Trìu, huyện Đại Từ, tỉnh Thái Nguyên",
     "openingHours": "Chưa cập nhật",
+    "image": "images/anhtancuong.jpg",
     "lat": 21.5394,
     "lng": 105.7750
   },
@@ -26,6 +27,7 @@
     ],
     "address": "Xã La Bằng, huyện Đại Từ, tỉnh Thái Nguyên",
     "openingHours": "Chưa cập nhật",
+    "image": "images/anhlabang.jpg",
     "lat": 21.6106,
     "lng": 105.5592
   },
@@ -41,6 +43,7 @@
     ],
     "address": "Huyện Phú Lương, tỉnh Thái Nguyên",
     "openingHours": "Chưa cập nhật",
+    "image": "images/anhphuluong.jpg",
     "lat": 21.7264,
     "lng": 105.7072
   },
@@ -55,6 +58,7 @@
     ],
     "address": "Huyện Đồng Hỷ, tỉnh Thái Nguyên",
     "openingHours": "Chưa cập nhật",
+    "image": "images/anhtraicai.jpg",      
     "lat": 21.697692053641973, 
     "lng": 105.8002125763117
   }

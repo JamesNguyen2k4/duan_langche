@@ -62,16 +62,44 @@ export function initUI(data) {
     window.viewVillageDetail = function (villageId) {
       const village = window.villages.find(v => v.id === villageId);
       if (!village) return;
-  
-      // fill detail
+    
+      // lưu làng hiện tại để recommend dùng được
+      window.currentVillage = village;
+    
+      // fill detail text
       document.getElementById("detail-name").textContent = village.name;
       document.getElementById("detail-address").textContent = village.address;
       document.getElementById("detail-hours").textContent = village.openingHours;
       document.getElementById("detail-code").textContent = village.code;
-  
+    
+      // fill detail image
+      const detailImage = document.getElementById("detail-image");
+      if (detailImage) {
+        if (village.image) {
+          detailImage.innerHTML = `
+            <img 
+              src="${village.image}" 
+              alt="${village.name}"
+              style="width:100%;height:100%;object-fit:cover;display:block"
+            />
+          `;
+          detailImage.classList.remove("bg-gradient-to-br", "from-green-300", "to-green-400", "flex", "items-center", "justify-center");
+        } else {
+          detailImage.innerHTML = `
+            <div class="text-center text-white">
+              <span class="text-6xl block mb-2">🖼️</span>
+              <span class="font-semibold">Hình ảnh làng chè</span>
+            </div>
+          `;
+          detailImage.classList.add("bg-gradient-to-br", "from-green-300", "to-green-400", "flex", "items-center", "justify-center");
+        }
+      }
+    
       const storyContainer = document.getElementById("detail-story");
-      storyContainer.innerHTML = (village.story || []).map(p => `<p class="leading-relaxed">${p}</p>`).join("");
-  
+      storyContainer.innerHTML = (village.story || [])
+        .map(p => `<p class="leading-relaxed">${p}</p>`)
+        .join("");
+    
       window.showSection("detail");
     };
   

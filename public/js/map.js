@@ -1,35 +1,43 @@
 export function initMap({ villages }) {
-    const map = L.map("map").setView([21.55, 105.85], 11);
-  
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "&copy; OpenStreetMap contributors"
-    }).addTo(map);
-  
-    villages.forEach(v => {
-      if (!v.lat || !v.lng) return; // thiếu tọa độ thì bỏ qua
-  
-      const marker = L.marker([v.lat, v.lng]).addTo(map);
-      marker.bindPopup(`
-        <div style="min-width:220px">
-          <h3 style="font-weight:700;margin-bottom:6px">${v.name}</h3>
-          <p style="font-size:14px;margin-bottom:10px">${v.description}</p>
-          <button data-village-id="${v.id}" class="leaflet-detail-btn"
-            style="background:#15803d;color:#fff;border:none;padding:6px 12px;border-radius:8px;cursor:pointer">
-            Xem chi tiết
-          </button>
-        </div>
-      `);
+  const map = L.map("map").setView([21.55, 105.85], 11);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors"
+  }).addTo(map);
+
+  villages.forEach(v => {
+    if (!v.lat || !v.lng) return;
+
+    const marker = L.marker([v.lat, v.lng]).addTo(map);
+
+    // popup hiển thị khi hover
+    marker.bindPopup(`
+      <div style="min-width:220px">
+        <img 
+          src="${v.image || '/images/default.jpg'}"
+          style="width:100%;height:120px;object-fit:cover;border-radius:8px;margin-bottom:6px"
+        />
+        <h3 style="font-weight:700;margin-bottom:4px">${v.name}</h3>
+        <p style="font-size:13px;color:#555">${v.description}</p>
+      </div>
+    `, {
+      closeButton: false
     });
-  
-    // delegate click trong popup
-    map.on("popupopen", (e) => {
-      const el = e.popup.getElement();
-      const btn = el?.querySelector(".leaflet-detail-btn");
-      if (!btn) return;
-  
-      btn.onclick = () => {
-        const id = Number(btn.dataset.villageId);
-        window.viewVillageDetail?.(id); // hàm này sẽ được gắn trong ui.js
-      };
+
+    // Hover vào marker -> mở popup
+    marker.on("mouseover", function () {
+      this.openPopup();
     });
-  }
+
+    // rời chuột -> đóng popup
+    marker.on("mouseout", function () {
+      this.closePopup();
+    });
+
+    // Click marker -> mở trang chi tiết
+    marker.on("click", function () {
+      window.viewVillageDetail?.(v.id);
+    });
+
+  });
+}
