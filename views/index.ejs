@@ -12,11 +12,27 @@
 />
   <!-- CSS tách riêng từ file gốc -->
   <link rel="stylesheet" href="/css/style.css" />
-  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script type="module" src="/js/main.js"></script>
 <body class="h-full">
+  <div class="site-bg-icons" aria-hidden="true">
+    <i class="fa-solid fa-leaf bg-icon green-1 icon-1"></i>
+    <i class="fa-solid fa-seedling bg-icon green-2 icon-2"></i>
+    <i class="fa-solid fa-mug-hot bg-icon tea icon-3"></i>
+  
+    <i class="fa-solid fa-spa bg-icon green-3 icon-4"></i>
+    <i class="fa-solid fa-mountain bg-icon earth icon-5"></i>
+    <i class="fa-solid fa-cloud bg-icon soft icon-6"></i>
+  
+    <i class="fa-solid fa-water bg-icon blue icon-7"></i>
+    <i class="fa-solid fa-wind bg-icon soft icon-8"></i>
+    <i class="fa-solid fa-sun bg-icon yellow icon-9"></i>
+  </div>
   <!-- Header -->
   <header class="header">
     <div class="max-w-7xl mx-auto px-4 py-4">
@@ -47,9 +63,9 @@
   </header>
 
   <!-- Main Content -->
-  <main class="max-w-7xl mx-auto px-4 py-8">
+  <main class="max-w-7xl mx-auto px-4 py-8 relative z-10">
     <!-- HOME SECTION -->
-    <section id="section-home" class="section active">
+    <section id="section-home" class="section active relative overflow-hidden">    
       <!-- Hero -->
       <div class="text-center mb-10">
         <h2 class="font-display text-4xl font-bold text-green-800 mb-4">Bản Đồ Làng Chè 🌿</h2>
